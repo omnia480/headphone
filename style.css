@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.hero{
+    position: relative;
+    background: rgba(0, 0, 0, 0.886);
+    height: 100vh;
+}
+.hero::after{ 
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(circle , rgba(111, 111, 111, 0.554) , transparent , transparent);
+    z-index: 1;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+header .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: "Anton", sans-serif;
+}
+header .nav-links{
+    display: flex;
+    gap: 40px;
+}
+header .nav-links a{
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+header .nav-links a:hover{
+    color: #c8c8c8ee;
+}
+.hero .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#headphone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    transition: all cubic-bezier(0.19 , 1 , 0.22 ,1)0.5s;
+    width: 45%;
+}
+.about{
+    background: rgba(0, 0, 0, 0.886) ;
+    position: relative;
+    height: 100%;
+    padding: 100px 0;
+}
+.about .text1,.text2,.text3,.text4{
+    width: 50%;
+    
+}
+.about .container .text1,.text2,.text3,.text4 h1{
+    color: #fff;
+    font-size: 3.5vw;
+}
+.about .text1 p,.text2 p,.text3 p,.text4 p{
+    color: #f0f0f0;
+    font-size: 1.5vw;
+    word-spacing: 1px;
+    line-height: 37px;
+}
+.about .container .text1 , .text3{
+    margin: 150px 1px 350px 2px;
+    animation: he 1 linear forwards;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 30%;
+}
+@keyframes he{
+    from{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+.about .container .text2 {
+    margin: 150px 1px 350px 750px;
+    animation: sh 1 linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.text4{
+    margin: 150px 1px 350px 750px;
+    animation: sh 1 linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+@keyframes sh{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+.content{
+    background: rgba(0, 0, 0, 0.886);
+}
+.content .container .text{
+    width: 50%;
+    height: 80vh;
+}
+.content .container .text h1{
+    font-size: 8vw;
+    color: #fff;
+}
+.content .container .text h4{
+    font-size: 2vw;
+    color: #f0f0f0;
+    margin-bottom: 25px;
+}
+.content .container .text h4 img{
+    width: 30px;
+}
+.content .container .text p{
+    font-size: 1.5vw;
+    color: #d1d1d1;
+    word-spacing: 2px;
+    line-height: 30px;
+}
+.content .container .text p span{
+    color: rgb(112, 53, 143);
+}
+.content .container .btn{
+    margin-top: 40px;
+}
+.content .btn button{
+    background:rgb(112, 53, 143) ;
+    font-size: 1.5vw;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content .btn button:hover{
+    background: #fff;
+    border: rgb(112, 53, 143) inset 2px;
+    color: rgb(112, 53, 143);
+}
